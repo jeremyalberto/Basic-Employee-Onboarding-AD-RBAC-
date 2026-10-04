@@ -6,9 +6,6 @@ Northstar Medical Group's Active Directory was left in bad shape after years of 
 ## Solution Overview
 I rebuilt the environment from scratch by standing up a new Windows Server domain controller and creating the NMG.com domain. I then designed a department based OU structure (Finance, HR, IT, Operations) so each department can get its own policies. Inside each OU I created a Global Security group (Finance-Users, HR-Users, IT-Users, Operations-Users) and used a flat RBAC model where access is granted to the group, not to individual users. I provisioned 15 user accounts using a consistent naming convention (first initial + last name, UPN of username@NMG.com) with department and job title filled in. Finally, I worked a support ticket (NMG-0047) where a user was misplaced, and used it to recommend a more controlled provisioning process for new hires.
 
-## Video Walkthrough
-[Video walkthrough coming soon]
-
 ## Tools Used
 * Windows Server 2022
 * Active Directory Domain Services
