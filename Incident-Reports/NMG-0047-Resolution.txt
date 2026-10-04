@@ -6,7 +6,7 @@ Unable to access HR shared resources. Desktop policies and mapped drives differ 
 
 Investigation:
 - Jane Cooper is currently in the Operations OU. She should be in the HR OU.
-- Jane Cooper is currently a member of: Domain Users, Operations-Users. She should be a member of: Domain Users, HR-Users.
+- Jane Cooper is currently a member of: Domain Users, Operations-Users. She should be a member of Domain Users and HR-Users.
 
 Root cause:
 Two problems. First, Jane was placed in the wrong OU (Operations), so Operations policies were being applied to her, which is why her wallpaper and software were different from her HR peers. Second, she was in the wrong security group (Operations-Users instead of HR-Users), so she had Operations permissions and none of the HR permissions her role needs, which is why she got Access Denied on HR software and files.
@@ -21,8 +21,10 @@ Verification:
 - Confirmed HR-Users is listed on her Member Of tab and she shows in the HR-Users members list.
 - Confirmed with the user that HR policies are applied and she has the correct software and access.
 
-Recommendation:
-Improve the new hire provisioning process. Use a request form completed by department heads/managers (HR starts the process) to cut down on misassigned groups. Managers should only be able to request accounts for roles in their own department (ex. an HR manager could not request an account for an IT hire).
+Recommendations:
+Short-term: Improve the new-hire provisioning process. Use a request form completed by department heads/managers (HR starts the process) to cut down on misassigned groups. Managers should only be able to request accounts for roles in their own department (ex. an HR manager could not request an account for an IT hire).
+
+Long-term: Provisioning should be driven by HR system data and role-based templates, so a user's department automatically determines their OU and security groups. Add quarterly access reviews in which managers confirm their team's access to catch mismatches like this one.
 
 Date resolved: October 4, 2026
 Resolved by: Jeremy (IT)
