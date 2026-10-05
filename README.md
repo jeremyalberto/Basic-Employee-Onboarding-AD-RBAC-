@@ -1,5 +1,7 @@
 # Basic Employee Onboarding (AD)(RBAC)
 
+Part 1 of the Northstar Medical Group lab series. Part 2: [Group Policy Baseline (NMG)](https://github.com/jeremyalberto/Group-Policy-Baseline-NMG)
+
 ## Problem Statement
 Northstar Medical Group's Active Directory was left in bad shape after years of mismanagement by their previous MSP. There was no real structure: no department OUs, no consistent security groups, and accounts were set up by hand with no naming standard. Because access was handed out manually and inconsistently, users ended up with the wrong permissions or missing the ones they needed. For a medical group that handles patient and employee data, that is a real HIPAA risk, since nobody could clearly say who had access to what.
 
